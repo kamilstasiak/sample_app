@@ -7,10 +7,11 @@ gem 'rails', '3.2.13.rc1'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :test do
-  gem 'capybara'
+
 end
 
 gem 'mysql2'
