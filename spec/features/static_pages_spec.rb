@@ -44,6 +44,16 @@ describe "Static pages" do
     end
   end
 
+  describe "Contact page" do
+    it "should have the content 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_selector('h1', :text => "Contact")
+    end
 
+    it "should have the right title" do
+      visit '/static_pages/contact'
+      expect(first('title').native.text).to eq "Ruby on Rails Tutorial Sample App | Contact"
+    end
+  end
 
 end
