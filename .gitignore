@@ -18,3 +18,5 @@
 .rspec
 
 Gemfile.lock
+
+bundler_stubs
