@@ -7,12 +7,10 @@ gem 'rails', '3.2.13.rc1'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'capybara'
+  gem 'guard-rspec'
 end
 
-group :test do
 
-end
 
 gem 'mysql2'
 
@@ -28,6 +26,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'guard-spork'
+  gem 'spork'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
