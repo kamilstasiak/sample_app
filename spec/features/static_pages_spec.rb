@@ -11,8 +11,13 @@ describe "Static pages" do
 
     it "should have the right title" do
       visit '/static_pages/home'
-#      expect(page).to have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Home")
-      expect(first('title').native.text).to eq "Ruby on Rails Tutorial Sample App | Home"
+#      expect(page).to have_selector('title', :text => "Ruby on Rails Tutorial Sample App")
+      expect(first('title').native.text).to eq "Ruby on Rails Tutorial Sample App"
+    end
+
+    it "should not have a custom page title" do
+      visit "/static_pages/home"
+      expect(first('title').native.text).not_to include "| Home"
     end
   end
 
