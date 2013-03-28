@@ -10,7 +10,7 @@ group :development, :test do
   gem 'guard-rspec'
 end
 
-
+gem 'bootstrap-sass'
 
 gem 'mysql2'
 
